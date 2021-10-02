@@ -1,0 +1,7 @@
+本アプリケーションの作成時には下記の依存関係を選択
+
+Spring Boot DevTools（開発 ツール） 
+Lombok（開発 ツール）
+Validation = 検証（I/ O） 
+Thymeleaf（テンプレート・エンジン） 
+Spring Web（Web）

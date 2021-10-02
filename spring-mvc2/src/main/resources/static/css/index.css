@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+.fontawesome {
+	padding-left: 20%;
+}
