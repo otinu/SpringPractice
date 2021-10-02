@@ -16,4 +16,4 @@ TEST-*.xml
 junit*.properties
 /.metadata/
 
-/test.html/
+/test*/
