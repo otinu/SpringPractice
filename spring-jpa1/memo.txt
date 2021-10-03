@@ -1,0 +1,21 @@
+モデルを作って、application.propertiesの設定をするだけで、
+DBに接続し、モデルの内容に合ったテーブルを自動生成してくれる
+
+---------------
+
+アプリ作成時、下記の依存関係を選択
+
+Spring Boot DevTools（開発 ツール）
+Lombok（開発ツール） 
+Spring Data JPA（SQL）
+H2 Database（SQL）
+Spring Web（Web）
+
+---------------
+
+BookモデルがDBのテーブル情報と関連付けられている。
+
+spring.datasource.url・・・DBの接続URLを、設定します。接続URLは、以下のようにインメモリとローカル保存などが選択できます。 
+●jdbc:h2:mem:DB名・・・H2Databaseをインメモリとして起動します。インメモリの場合、Spring Bootを終了するとDBが消去されます。
+●jdbc:h2:保存先・・・H2Databaseをローカルに保存します。
+
