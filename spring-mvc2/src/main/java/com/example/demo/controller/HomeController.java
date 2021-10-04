@@ -23,7 +23,7 @@ public class HomeController {
             BindingResult result) {
 
         if (result.hasErrors()) {
-            // エラーがある場合、index.htmlに戻る
+            //エラーがある場合、index.htmlに戻る
             return "index";
         }
         return "confirm";
