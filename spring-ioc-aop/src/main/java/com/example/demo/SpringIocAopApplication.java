@@ -14,24 +14,26 @@ import lombok.extern.slf4j.Slf4j;	//ここで、lombokのslf4jをインポート
  * private static final Logger log = LoggerFactory.getLogger(SpringIocAopApplication.class);
  */
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor    //ここは今までと違う記述
 @SpringBootApplication
 public class SpringIocAopApplication implements CommandLineRunner {
 
     private final ApplicationContext appContext;	//ApplicationContextインタフェースがIoCコンテナを表す
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringIocAopApplication.class, args);	//ここの部分の引数二つの意味がわからない。 一旦、「IoCコンテナを起動するためのお作法」だと捉えておく。
+        SpringApplication.run(SpringIocAopApplication.class, args);
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) throws Exception {  //ここで、24行目のrunメソッドをオーバーライドして、オリジナルの処理を実装している。
     	
     	//IoCコンテナに管理されるオブジェクトを Bean という。
-    	// getBeanDefinitionNamesでIoCコンテナに登録されているBeanを確認できる。
+    	// ApplicationContextインタフェースのgetBeanDefinitionNamesでIoCコンテナに登録されているBeanを取得できる。
     	
         String[] allBeanNames = appContext.getBeanDefinitionNames();
         
+        //そもそも、この章の本筋は「IoCとは何か」を理解する章のため、下記に関するライブラリに深追いする必要はあまりないと思う。
+
         for (String beanName: allBeanNames) {
             log.info("Bean名: {}", beanName);	//SLF4Jと@slf4j(Lombok)の組み合わせにより、ログ出力
             

@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBoot1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBoot1Application.class, args);
+		SpringApplication.run(SpringBoot1Application.class, args);	//Springアプリケーションを実行するための記述
 	}
 
 }
