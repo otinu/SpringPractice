@@ -1,0 +1,6 @@
+//バインド名は、クラス名の"invoice"（先頭小文字）になります
+publicStringconfirm(@Validated@ModelAttributeInvoicesample)
+
+//バインド名は、指定の"invoice"になります
+publicStringconfirm(@Validated@ModelAttribute("invoice")Samplesample)
+

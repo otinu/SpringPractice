@@ -1,0 +1,10 @@
+エラーメッセージの優先順位はNo.1470に一覧あり
+
+I18n化の記述はapplication.propertiesにあり。
+SpringToolSuite4では、日本語のI18n設定ファイルを作る場合にはプロパティからUTF-8指定が必要
+公式ドキュメントの内容は分かりにくい(項目5)
+https://spring.pleiades.io/spring-boot/docs/current/reference/html/features.html#features.internationalization
+
+おそらく、ValidationMessagesファイルの{0}などはモデルと繋がっている。
+{0} ⇒ それぞれのフィールド名
+{1}や{2} ⇒ モデル側の「@〇〇」 　　(例)モデル側で@Size(max = 254)なら、ValidationMessage側で {1}=254,{2}=0 が格納される
